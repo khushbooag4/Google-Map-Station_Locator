@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Account registration form</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet'
+        type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-block">
+        <form id="station-form" >
+            <h1>Add a Charging Station</h1>
+            <fieldset>
+                <legend>
+                    <h3>Details of a Station</h3>
+                </legend>
+                <div class="details">
+                    <div>
+                        <div><label>Operator Name* :- </label><input type="text" name="name" id="operatorName" required></div>
+                        <div><label>Phone Number* :- </label><input type="text" name="name" id="phoneNumber" required></div>
+                        <div><label>Address* :- </label><input type="text" name="name" id="address" required></input></div>
+                        <div><label>Latitude :- </label><input type="text" name="name" id="latitude"></div>
+                        <div><label>Longitude :- </label><input type="text" name="name" id="longitude"></div>
+                        <div><label>State :- </label>
+                        <select id = "state" required>
+                            <option value=""></option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Bangolore">Bangolore</option>
+                            <option value="Kolkata">Kolkata</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select></div>
+                    </div>
+                    <div class="container">
+                        <label>Status*</label>
+                        <div class="Status">
+                            <input type="radio" value="false" id="offline" name="Status" required />
+                            <label for="offline" class="radio">Offline</label>
+                            <input type="radio" value="true" id="online" name="Status" required />
+                            <label for="online" class="radio">Online</label>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <button type="submit" id="btn" href="/">Submit</button>
+        </form>
+    </div>
+    <script src="js/add.js"></script>
+</body>
+
+</html>
