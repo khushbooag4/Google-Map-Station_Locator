@@ -26,16 +26,15 @@ function setMarker(Userdata, key) {
   });
   let status;
   if(Userdata.status === false){
-      status = "Online";
+      status = "<span>" + "Online" + "</span>";
   }else{
-    status = "Offline";
+    status = "<span>" + "Offline"+ "</span>";
   }
   var infoContent = "<strong>" + Userdata.operatorName + "</strong>";
-  infoContent += "<p>" + Userdata.address + "," + Userdata.state +"</p>" +
+  infoContent += "<p>" + Userdata.address + "," + "  " + Userdata.state +"</p>" +
     "<p>" + "Latitude :- " + Userdata.location.latitude + "</p>" + "<p>" +
-    "Longitude :- " + Userdata.location.longitude + "</p>" + "<p>" + "Phone Number:- " +
-    "<b>" + Userdata.phoneNumber + "</b>" + "</p>" +
-    "<p>" + "Status :- " + status + "</p>";
+    "Longitude :- " + Userdata.location.longitude + "</p>" + "<p>" + "Phone Number:- " + "<b>" + "+91"+ Userdata.phoneNumber + "</b>" + "</p>" +
+    "<p>" + "Status :- " + "<b>" + status + "</b>" + "</p>";
 
   marker.info = new google.maps.InfoWindow({
     content: infoContent,
